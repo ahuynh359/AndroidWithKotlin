@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">AlphabetWords</string>
+    <string-array name="alphabet_names">
+        <item>apple</item>
+        <item>ball</item>
+        <item>chair</item>
+        <item>door</item>
+        <item>egg</item>
+        <item>fish</item>
+        <item>girl</item>
+        <item>hat</item>
+        <item>ice</item>
+        <item>jug</item>
+        <item>kite</item>
+        <item>leaf</item>
+        <item>moon</item>
+        <item>net</item>
+        <item>orange</item>
+        <item>pencil</item>
+        <item>quilt</item>
+        <item>robot</item>
+        <item>star</item>
+        <item>tap</item>
+        <item>umbrella</item>
+        <item>vase</item>
+        <item>watch</item>
+        <item>x-ray</item>
+        <item>yo-yo</item>
+        <item>zip</item>
+
+    </string-array>
+</resources>
