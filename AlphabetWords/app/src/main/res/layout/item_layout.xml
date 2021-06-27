@@ -4,8 +4,8 @@
     android:layout_margin="10dp"
     android:outlineAmbientShadowColor="@color/black"
     app:cardCornerRadius="10dp"
-    android:layout_width="230dp"
-    android:layout_height="wrap_content">
+    android:layout_width="150dp"
+    android:layout_height="150dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:orientation="vertical"
@@ -17,12 +17,12 @@
             android:src="@drawable/h1"
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"/>
+            android:layout_height="120dp"/>
         <TextView
-            android:layout_margin="10dp"
+            android:textStyle="bold"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:fontFamily="sans-serif-light"
             android:id="@+id/textView"
             android:text="Anh"

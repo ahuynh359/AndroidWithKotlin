@@ -2,6 +2,9 @@ package com.example.alphabetwords
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,16 +17,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val model=  Model(this)
 
+        //Initial data
+        val model=  Model(this).loadItem()
+
+        //set Adapter
         val recyclerView = recyclerView
-        val adapter = RecyclerViewAdapter(
-            this,
-            model.loadItem()
-        )
-        val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = adapter
+        recyclerView.adapter = RecyclerViewAdapter(this,model,)
+
+        val layout = GridLayoutManager(this,2)
+        recyclerView.layoutManager= layout
+
+
+        // Use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true)
 
 
@@ -31,4 +38,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 }

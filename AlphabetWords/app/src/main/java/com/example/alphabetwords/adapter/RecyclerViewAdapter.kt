@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,8 @@ import com.example.alphabetwords.R
 import com.example.alphabetwords.data.Item
 import kotlinx.android.synthetic.main.item_layout.view.*
 
-class RecyclerViewAdapter(private val context:Context,private val items:List<Item>):RecyclerView.Adapter
+class RecyclerViewAdapter(private val context:Context,private val items:List<Item>
+):RecyclerView.Adapter
  <RecyclerViewAdapter.ItemHolder>() {
 
 
@@ -28,15 +30,22 @@ class RecyclerViewAdapter(private val context:Context,private val items:List<Ite
          holder.image.setImageResource(items[position].images)
 
 
+
+
+
      }
 
      override fun getItemCount(): Int {
          return items.size
      }
 
-     class ItemHolder(private val view: View):RecyclerView.ViewHolder(view){
+     inner class ItemHolder(private val view:  View):RecyclerView.ViewHolder(view) {
         val textView: TextView = view.textView
          val image:ImageView = view.imageView
+
+
+
      }
+
 
  }
